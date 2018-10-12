@@ -1,0 +1,25 @@
+baseURL = "https://lpro.epha.se"
+languageCode = "fr"
+defaultContentLanguage = "fr"
+title = "Licence pro ADSILLH - Cours et TD"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+theme = "mainroad"
+rssLimit = 10
+paginate = 10
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
+[Params]
+    toc = true
+    post_navigation = true
+    postSections = ["reseau", "progsys", "installations", "bdd"]
+
+[Params.sidebar]
+    home = "right" # Configure layout for home page
+    list = "left"  # Configure layout for list pages
+    single = false # Configure layout for single pages
+    # Enable widgets in given order
+    widgets = ["search", "categories", "taglist"]
