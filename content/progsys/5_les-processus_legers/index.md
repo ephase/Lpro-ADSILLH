@@ -521,7 +521,7 @@ en place des mécanisme de synchronisation entre eux comme les mutex.
 
 ## Bibliographie
 
- - [Posix Thread Programming][l_posixlprog] sur le site du Livemore Computing
+ - [Posix Thread Programming][l_posixtprog] sur le site du Livemore Computing
      Center (en)
  - [Initiation à la programmation multitâches en C avec pthreads][l_progcmulti]
      par Franck Hecht sur Developpez.com. Avec un test de performance sur un
