@@ -62,7 +62,7 @@ permettra à LDAP d'aller chercher les utilisateurs dans l'annuaire LDAP. C'est
 en quelque sorte la requête pour aller checrher les informations dans
 l'annuaire.
 
-```cf
+```conf
 server_host = ldap://ldapsrv.u-bordeaux.fr
 search_base = dmdName=users,dc=u-bordeaux,dc=fr
 bind = yes
