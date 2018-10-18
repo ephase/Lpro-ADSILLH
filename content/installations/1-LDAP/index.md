@@ -2,7 +2,7 @@
 title: Les annuaires LDAP
 date: 2018-09-06
 tags: ["annuaire", "LDAP", "LDIG"]
-categories: ["Installations", "Cours"]
+categories: ["Installation", "Cours"]
 ---
 
 **LDAP** pour *Lightweight Directory Access Protocol* est à l'origine un

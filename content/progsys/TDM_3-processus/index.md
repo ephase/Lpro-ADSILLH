@@ -1,7 +1,7 @@
 ---
 Title: "TDM : Les Processus"
 Date: 2018-09-18
-Category: Programmation système
+Categories: ["Programmation système", "TD machine"]
 tags: ['TD Machine', 'programmation', 'C', 'processus']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title : "TDM : Les processus légers"
-category: Programmation système
+categories: ["Programmation système", "TD machine"]
 date: 2018-09-25
 ---
 [télécharger les questions](./files/tdm5.pdf)

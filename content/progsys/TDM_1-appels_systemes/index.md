@@ -1,9 +1,10 @@
 ---
-title: Programmation systeme TDM 1
+title: "TDM : Les appels système"
 date: 2018-09-05
-categorie: ['Programmation système', 'TDM']
+categories: ['Programmation système', 'TD machine']
 tags : ['appels', 'systèmes', 'Python', 'C']
 ---
+
 #Différence entre les strace C et Python
 
 Le strace python est plus volumineux, ce aui semble normal puisque le code est
