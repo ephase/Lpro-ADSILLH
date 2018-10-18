@@ -1,6 +1,7 @@
 ---
 title: "Les processus légers"
-categories: ["C", "programmation", "threads"]
+categories: ["Programmation système", "cours"]
+tags: ["C", "programmation", "threads", "mutex"]
 date: 2018-10-02
 ---
 
@@ -18,7 +19,7 @@ Il comportent plusieurs avantages :
      mise en place d'*IPC*)
  - ils sont... légers,  de l'ordre de facteur 10 pour leurs création par le
      noyau
- - le partage d'informationa entre processus légers est de facto plus simple
+ - le partage d'information entre processus légers est de facto plus simple
      puisqu'ils partagent le même espace mémoire
 
 Ils partagent :
@@ -32,7 +33,7 @@ Ils ne partagent pas :
 
  - le *thread ID*, id de processus léger
  - leurs piles d'exécution ; pas de partage de variables locales lors d'appels
-     de fonctiions
+     de fonctions
  - `errno` car cela présenterai un risque de "collision" entre threads
  - la mémoire locale du processus appelée *Thread Local Storage*
 
