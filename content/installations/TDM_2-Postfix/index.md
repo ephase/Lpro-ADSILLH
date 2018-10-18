@@ -2,7 +2,7 @@
 title: "Installation : Postfix + LDAP"
 categories: ["Installation", "TD machine"]
 tags: ["Postfix", "LDAP", "maildir"]
-date: 2018-09-13
+date: 2018-10-4
 modify: 2018-10-18
 ---
 
