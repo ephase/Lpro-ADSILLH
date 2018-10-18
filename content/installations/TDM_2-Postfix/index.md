@@ -3,7 +3,7 @@ title: "Installation : Postfix + LDAP"
 categories: ["Installation", "TD machine"]
 tags: ["Postfix", "LDAP", "maildir"]
 date: 2018-10-4
-modify: 2018-10-18
+lastmod: 2018-10-18
 ---
 
 Le but de ce TD machine est d'installer et de configurer postfix et de le
@@ -51,7 +51,7 @@ pour le serveur (ici localhost).
 
 ## Coupage avec LDAP
 
-Postfix peut aller n'importe quelle information utiles (boites, boites
+Postfix peut aller chercher n'importe quelle information utile (boites, boites
 virtuelles, domaines etc.) dans l'annuaire. Il suffira seulement de lui indiquer
 ou chercher via des fichiers de configurations officiant comme "requêtes"
 
@@ -76,7 +76,7 @@ result_format = %s/
 Le slash à la fin de notre chaine de retour permet de forcer postfix à utiliser
 le format de stockage [maildir][l_maildir].
 
-[l_maildir](https://fr.wikipedia.org/wiki/Maildir)
+[l_maildir]:(https://fr.wikipedia.org/wiki/Maildir)
 
 #### Tester le retour de postfix
 
