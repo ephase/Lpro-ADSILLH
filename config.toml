@@ -7,7 +7,7 @@ pygmentsUseClasses = false
 theme = "mainroad"
 rssLimit = 10
 paginate = 10
-
+enableRobotsTXT = true
 [taxonomies]
     category = "categories"
     tag = "tags"
