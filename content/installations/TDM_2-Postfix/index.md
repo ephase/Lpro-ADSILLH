@@ -1,7 +1,7 @@
 ---
 title: "Installation : Postfix + LDAP"
 categories: ["Installation", "tdm"]
-tags: ["Postfix", "LDAP", "maildir]
+tags: ["Postfix", "LDAP", "maildir"]
 date: 2018-09-13
 modify: 2018-10-18
 ---
