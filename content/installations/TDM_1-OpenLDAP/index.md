@@ -1,8 +1,8 @@
 ---
 title: TDM1 OpenLDAP - notes d'installation
 date: 2018-09-13
-lastmod: 2018-08-27
-categorie: ["Installations", "TD machines"]
+lastmod: 2018-09-27
+categories: ["Installations", "TD machines"]
 tags: ['OpenLDAP', 'Apache Directory Studio', 'PAM']
 ---
 
