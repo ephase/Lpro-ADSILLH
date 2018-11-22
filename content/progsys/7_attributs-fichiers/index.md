@@ -2,7 +2,7 @@
 title: "Les attributs de fichiers"
 date: 2018-10-16
 categories: ["Programmation système", "cours"]
-tags:[]
+tags: ["fichier", "i-node"]
 ---
 
 Les attributs de fichiers représentes toutes les informations dont dispose le
