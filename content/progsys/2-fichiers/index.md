@@ -55,7 +55,7 @@ O APPEND | Écriture à la fin du fichier
 
 #### mode
 
-C'est aussi un masquage de bits définissant le node du fichier en vas de
+C'est aussi un masquage de bits définissant le mode du fichier en cas de
 création :
 
 | mode    | octal | utilisation                                           |
@@ -69,9 +69,9 @@ création :
 | S IWGRP | 00020 | Le groupe a le droit d'écrire                         |
 | S IXGRP | 00010 | Le groupe a le droit d'exécuter                       |
 | S_IRWXO | 00007 | Le propriétaire a le droit de lire, écrire, exécuter  |
-| S_IROTH | 00004 | L’utilisateur a le droit de lire                      |
-| S IWOTH | 00002 | L'utilisateur a le droit d'écrire                     |
-| S IXOTH | 00001 | L'utilisateur a le droit d'exécuter                   |
+| S_IROTH | 00004 | Les autres ont le droit de lire                       |
+| S IWOTH | 00002 | Les autres onr le droit d'écrire                      |
+| S IXOTH | 00001 | Les autres ont le droit d'exécuter                    |
 
 #### Exemple en C
 
