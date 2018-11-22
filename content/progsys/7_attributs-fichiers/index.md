@@ -5,7 +5,7 @@ categories: ["Programmation système", "cours"]
 tags: ["fichier", "i-node"]
 ---
 
-Les attributs de fichiers représentes toutes les informations dont dispose le
+Les attributs de fichiers représentent toutes les informations dont dispose le
 système sur les fichiers et répertoires : propriétaire, groupe permissions,
 taille, horodatage etc.
 
