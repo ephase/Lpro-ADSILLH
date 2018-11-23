@@ -20,16 +20,16 @@ l'exécution de programmes pour l'utilisateur final :
  - exécution de programmes
  - accès aux matériels
  - accès au(x) système(s) de fichier(s)
- - accès  mémoire
+ - accès mémoire
  - accès réseau
 
-## POSIX et IEE
+## POSIX et IEEE
 
 La norme POSIX, standard IEEE, définie les interfaces utilisateurs et
 logiciels, la ligne de commande standard et son interface de scripts, les
 entrées / sorties de base. les attributs de fichiers (permissions)
 
-La norme SUS *Single Unie Specification* est une norme plus récente et moins
+La norme SUS *Single Unix Specification* est une norme plus récente et moins
 contraignante. elle est basée sur les travaux de l'IEEE et de l'Open Group.
 
 [SUS][https://fr.wikipedia.org/wiki/Single_UNIX_Specification] et
@@ -41,7 +41,7 @@ LSB ou *Linux Standard Base* définie l'agencement général du système GNU / L
 : librairies standard, commandes POSIX étendues, hiérarchie du système de
 fichiers, les runlevels etc.
 
-[LSB][https://fr.wikipedia.org/wiki/Linux_Standard_Base] sur Wikipedia.
+[LSB](https://fr.wikipedia.org/wiki/Linux_Standard_Base) sur Wikipédia.
 
 ## Architecture des systèmes "modernes"
 
@@ -51,8 +51,8 @@ Ils sont organisés en couches un peu à la façon du modèle OSI :
  2. l'assemblage (assembleur)
  3. système (applications système)
  4. Application
- N. Les applications / machines virtuelles (capables de traverser les couches
- pour atteindre le matériel)
+ 5. (couche N) Les applications / machines virtuelles (capables de traverser les
+    couches pour atteindre le matériel)
 
  Plus la couche est basse, plus la programmation est efficace du point de vue
  des performances mais plus difficile est la portabilité (un code assembleurs et
