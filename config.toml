@@ -15,7 +15,7 @@ enableRobotsTXT = true
 [Params]
     toc = true
     post_navigation = true
-    postSections = ["reseau", "progsys", "installations", "bdd", "Sécurité"]
+    postSections = ["reseau", "progsys", "installations", "bdd", "securite"]
 
 [Params.sidebar]
     home = "right" # Configure layout for home page
