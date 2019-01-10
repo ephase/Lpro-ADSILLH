@@ -1,7 +1,7 @@
 ---
 title: "Architecture d'Internet"
 date: 2018-10-10
-categories: ["Réseaux", "cours"]
+categories: ["Réseau", "cours"]
 tags: ["Internet", "routage", "interconnexion", "FAI"]
 ---
 

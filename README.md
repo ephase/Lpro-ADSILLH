@@ -1,4 +1,4 @@
-Notes de cours et TD machines
+Notes de cours et TD machine
 -----------------------------
 
 Dépôt git pour la construction d'un site statique avec

@@ -1,7 +1,7 @@
 ---
 date: "2018-09-03"
 categories: ["Réseau", "Cours"]
-title: "Réseaux - Introduction"
+title: "Réseau - Introduction"
 tags: ["OSI", "latence", "débit"]
 ---
 
