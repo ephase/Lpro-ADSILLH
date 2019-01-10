@@ -36,7 +36,7 @@ C'est le mode le plus rapide du logiciel, pour tester notre fichier de mot de
 passe dans ce mode il suffit de faire : 
 
 ```
-john -single -format=raw_MD5 logins.txt
+john -single -format=raw-MD5 logins.txt
 ```
 
 Voici la sortie de la commande :
@@ -66,7 +66,7 @@ Il est possible de retrouver les mots de passes que `john` a trouvé avec la
 commande :
 
 ```
-john -show -format=raw_MD5 logins.txt
+john -show -format=raw-MD5 logins.txt
 ```
 
 Et le résultat :
@@ -97,7 +97,7 @@ avnrflr          (bt1)
 spécifier la fonction de hashage via le paramètre `-format=<hash>` :
 
 ```
-john -format=raw_MD5 logins.txt
+john -format=raw-MD5 logins.txt
 ```
 
 
@@ -132,7 +132,7 @@ Plus rapide que la technique précédente, celle-ci est basée sur une liste
 définie de mots de passe> Voici la commande :
 
 ```
-john -wordlist=top500movies.txt -format=raw_MD5 logins.txt
+john -wordlist=top500movies.txt -format=raw-MD5 logins.txt
 ```
 
 Et le résultat : 
@@ -185,7 +185,7 @@ caractères.
 Pour l'appliquer modifions notre dernière commande `john` comme ceci :
 
 ```
-john -format=raw_MD5 -wordlist=top500movies.txt -rules=MaListe logins.txt
+john -format=raw-MD5 -wordlist=top500movies.txt -rules=MaListe logins.txt
 ```
 
 ```
@@ -216,7 +216,7 @@ s?v[0-9]
 Nous pouvons maintenant lancer la recherche avec la commande
 
 ```
-john -wordlist=top500movies.txt -rules=Voyelles logins.txt
+john -format=raw-MD5 -wordlist=top500movies.txt -rules=Voyelles logins.txt
 ```
 
 Et voilà la sortie :
