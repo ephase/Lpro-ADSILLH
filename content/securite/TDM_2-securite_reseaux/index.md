@@ -109,7 +109,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.39 seconds
 ```
 
 Nous retrouvons ici beaucoup d'informations mais il est possible d'en apprendre
-plus en rajoutant les paramètres `-a -V`.
+plus en rajoutant les paramètres `-A -v`.
 
 ## ARP cache poisoning
 
